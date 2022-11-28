@@ -1,0 +1,134 @@
+@use '../../scss/mixin' as *;
+@use '../../scss/variables' as *;
+@use '../../scss/breakpoints' as *;
+@use '../../scss/animations' as *;
+@use '../../scss/colors' as *;
+
+
+.gpt3__navbar {
+    @include flex(center, space-between);
+    padding: 2rem 2rem;
+}
+
+.gpt3__navbar-links {
+    flex: 1;
+    @include flex(center, flex-start);
+}
+
+.gpt3__navbar-links_logo {
+    margin-right: 2rem;
+}
+
+.gpt3__navbar-links_logo img {
+    width: 62.56px;
+    height: 16.02px;
+}
+
+.gpt3__navbar-links_container {
+    display: none;
+    flex-direction: row;
+    list-style: none;
+    @include laptop {
+        display: flex;
+    }
+}
+
+.gpt3__navbar-links_container li a, .gpt3__navbar-sign p {
+    color: #fff;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.gpt3__navbar-sign { 
+    display: none;
+    @include tablet {
+        @include flex(center, flex-end);
+        margin-right: 2rem;
+    }
+    @include laptop {
+        margin-right: 0;
+    }  
+    
+}
+
+.gpt3__navbar-sign button,
+.gpt3__navbar-mobile_container button {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #ff4820;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+
+.gpt3__navbar-mobile svg {
+    cursor: pointer;
+    @include laptop {
+        display: none;
+    }
+}
+
+.gpt3__navbar-mobile_container {
+    @include flex(flex-end, flex-end);
+    flex-direction: column;
+    text-align: end;
+    background: $color-footer;
+    padding: 2rem;
+    position: absolute;
+    top: 40px;
+    right: 2rem;
+    margin-top: 2rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+    @include tablet {
+        top: 60px;
+    }
+}
+
+.gpt3__navbar-mobile_links  {
+    list-style: none;
+}
+
+.gpt3__navbar-mobile_links li {
+    margin: 1rem 0;
+}
+
+.gpt3__navbar-mobile_links li a {
+    color: #fff;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.gpt3__navbar-mobile_sign,
+.gpt3__navbar-mobile-sign button {
+    color: #fff;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+    @include tablet {
+        display: none;
+    }
+}
+
+.gpt3__navbar-mobile_container button {
+    margin-top: 1rem;
+}
