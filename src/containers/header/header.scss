@@ -1,0 +1,82 @@
+@use '../../scss/mixin' as *;
+@use '../../scss/variables' as *;
+@use '../../scss/breakpoints' as *;
+@use '../../scss/animations' as *;
+@use '../../scss/colors' as *;
+
+
+
+.gpt3__header {
+    @include flex(center, space-between);
+    flex-direction: column;
+}
+
+.gpt3__header-content {
+    margin-bottom: 2rem;
+}
+
+.gpt3__header-content h1 {
+    color: #fff;
+    font-family: $font-family;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.gpt3__header-content p {
+    color: $color-text;
+    font-family: $font-family;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 1.5rem;
+}
+
+.gpt3__header-content_input {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+}
+
+.gpt3__header-content_input input {
+    flex: 2;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    width: 100%;
+    min-height: 50px;
+    background: $color-footer;
+    border: 2px solid $color-footer;
+    padding: 0 1rem;
+    outline: none;
+    border-radius: 5px 0px 0px 5px;
+    color: #fff;
+}
+
+.gpt3__header-content_input button {
+    flex: 1;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    min-height: 50px;
+    width: 100%;
+    background: #FF4820;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+    color: #fff;
+}
+
+.gpt3__header-content_people {
+    margin-top: 1.5rem;
+    @include flex(center, space-around);
+    flex-direction: column;    
+}
+
+.gpt3__header-content_people p {
+    margin-top: 0;
+    font-size: 16px; 
+}

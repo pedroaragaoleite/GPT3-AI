@@ -8,6 +8,9 @@
 .gpt3__navbar {
     @include flex(center, space-between);
     padding: 2rem 2rem;
+    @include laptop {
+        padding: 2rem 7.5rem;
+    }
 }
 
 .gpt3__navbar-links {
@@ -41,7 +44,7 @@
     line-height: 25px;
     text-transform: capitalize;
 
-    margin: 0 1rem;
+    margin: 0 0.75rem;
     cursor: pointer;
 }
 

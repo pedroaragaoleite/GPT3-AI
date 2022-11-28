@@ -6,7 +6,15 @@ import { RiCloseLine, RiMenu3Line } from 'react-icons/ri'
 import logo from '../../assets/logo.svg'
 
 
-const links = {}
+const Menu = () => (
+  <>
+    <li><Link to="#home">Home</Link></li>
+    <li><Link to="#wgpt3">What is GPT?</Link></li>
+    <li><Link to="#possibility">Open AI</Link></li>
+    <li><Link to="#features">Case Studies</Link></li>
+    <li><Link to="#library">Library</Link></li>
+  </>
+)
 
 
 const Navbar = () => {
@@ -19,11 +27,7 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </div>
         <ul className='gpt3__navbar-links_container'>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#wgpt3">What is GPT?</a></li>
-          <li><a href="#possibility">Open AI</a></li>
-          <li><a href="#features">Case Studies</a></li>
-          <li><a href="#library">Library</a></li>
+          <Menu />
         </ul>
       </div>
       <div className='gpt3__navbar-sign'>
@@ -38,11 +42,7 @@ const Navbar = () => {
         {toggleMenu && (
           <div className='gpt3__navbar-mobile_container scale-up-center'>
             <ul className='gpt3__navbar-mobile_links'>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#wgpt3">What is GPT?</a></li>
-              <li><a href="#possibility">Open AI</a></li>
-              <li><a href="#features">Case Studies</a></li>
-              <li><a href="#library">Library</a></li>
+              <Menu />
             </ul>
             <div className='gpt3__navbar-mobile_sign'>
               <p>Sign in</p>
