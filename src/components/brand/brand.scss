@@ -1,0 +1,12 @@
+@use '../../scss/mixin' as *;
+@use '../../scss/variables' as *;
+@use '../../scss/breakpoints' as *;
+@use '../../scss/animations' as *;
+@use '../../scss/colors' as *;
+
+
+.gpt3__brand {
+    @include flex(center, center);
+    flex-wrap: wrap;
+    gap: 2rem;  
+}

@@ -8,6 +8,9 @@
 .gpt3__navbar {
     @include flex(center, space-between);
     padding: 2rem 2rem;
+    @include tablet {
+        padding: 2rem 4rem;
+    }
     @include laptop {
         padding: 2rem 7.5rem;
     }
