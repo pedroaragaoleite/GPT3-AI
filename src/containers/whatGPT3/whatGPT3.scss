@@ -3,3 +3,97 @@
 @use '../../scss/breakpoints' as *;
 @use '../../scss/animations' as *;
 @use '../../scss/colors' as *;
+
+
+
+.gpt3__what {
+    background: #042C54;
+    margin: 0 2rem;
+    @include laptop {
+        margin: 0 4rem;
+        padding: 4rem 3.75rem;
+    }
+}
+
+.gpt3__what-is, .gpt3__what-banner {
+    margin-bottom: 4rem;
+    @include laptop {
+        @include flex(center, space-between);
+    }
+}
+
+
+.gpt3__what-is__title {
+    width: 100%;
+}
+
+.gpt3__what-is__title,
+.gpt3__what-content__title {
+    font-family: $font-family;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 75px;    
+    letter-spacing: -0.04em;    
+    color: #FFFFFF;;
+}
+
+.gpt3__what-is__text {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #81AFDD;
+}
+
+.gpt3__line {
+    background: $gradient-bar;
+    width: 50px;
+    height: 2px;
+}
+
+.gpt3__what-banner__content {
+    @include laptop {
+        @include flex(flex-start, flex-start);
+
+    }
+    h2 {
+        font-family: $font-family;
+        font-weight: 800;
+        font-size: 34px;
+        line-height: 45px; 
+        background: $gradient-text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+        @include laptop {
+            flex: 1;
+            display: flex;
+        }
+    }
+    a {
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;        
+        color: #FF8A71;
+        @include laptop {
+            flex: 0.5;
+            display: flex;
+        } 
+    }
+}
+
+.gpt3__what-content__item:not(:last-child) {
+    margin-bottom: 4rem;
+    @include laptop {
+        margin-bottom: 0;
+    }
+}
+
+.gpt3__what-content {
+    @include laptop {
+        @include flex(center, space-between);
+        gap: 2rem;
+    }
+}
